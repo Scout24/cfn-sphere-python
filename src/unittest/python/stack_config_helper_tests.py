@@ -137,7 +137,7 @@ class StackConfigHelperTest(unittest.TestCase):
         stacks_config = self.get_stack_config_helper(FIRST_TEST_CONFIG)
         self.assertEqual(rename_refs_mock.call_count, 2)
         # after init the stacknames are already renamed
-        new_stack_names = [k for k, v in stacks_config.config['stacks'].iteritems()]
+        new_stack_names = [k for k, v in stacks_config.config['stacks'].items()]
         self.assertEqual(['foo-it', 'foo-one-it'], new_stack_names)
         self.assertEqual({'foo': 'foo-it', 'foo-one': 'foo-one-it'},
                          stacks_config.stack_name_mappings)
