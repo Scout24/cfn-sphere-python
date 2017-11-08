@@ -1,6 +1,6 @@
 ## cfn sphere python
 
-[![Build Status](https://travis-ci.org/ImmobilienScout24/cfn-sphere-python.svg?branch=master)](https://travis-ci.org//ImmobilienScout24/cfn-sphere-python)
+[![Build Status](https://travis-ci.org/ImmobilienScout24/cfn-sphere-python.svg?branch=master)](https://travis-ci.org/ImmobilienScout24/cfn-sphere-python)
 
 [![Code Health](https://landscape.io/github//ImmobilienScout24/cfn-sphere-python/master/landscape.svg?style=flat)](https://landscape.io/github/ImmobilienScout24/cfn-sphere-python/master)
 
