@@ -32,5 +32,6 @@ def set_properties(project):
         'Intended Audience :: System Administrators',
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
+        'Programming Language :: Python2.7',
         'Topic :: System :: Systems Administration'
     ])
