@@ -1,4 +1,4 @@
-## cfn sphere python
+## cfn-sphere-python
 
 [![Build Status](https://travis-ci.org/ImmobilienScout24/cfn-sphere-python.svg?branch=master)](https://travis-ci.org/ImmobilienScout24/cfn-sphere-python)
 
