@@ -127,10 +127,10 @@ class StackConfigHelper(object):
             return stack_config
 
         new_stack_config = stack_config
-        for key, value in stack_config['parameters'].iteritems():
+        for key, value in stack_config['parameters'].items():
             if isinstance(value, (str, unicode)) and value.lower().startswith('|ref|'):
                 ref = value.split('|', 2)[2]
-                for old, new in mapping.iteritems():
+                for old, new in mapping.items():
                     if ref.startswith('{}.'.format(old)):
                         new_stack_config['parameters'][key] = '|ref|{}{}'.format(
                             new, ref[len(old):])
@@ -151,7 +151,7 @@ class StackConfigHelper(object):
         for stack_name, _ in self.config['stacks'].items():
             if not shortest_stack_name or len(stack_name) < len(shortest_stack_name):
                 shortest_stack_name = stack_name
-        basename = [old for old, new in self.stack_name_mappings.iteritems() if new ==
+        basename = [old for old, new in self.stack_name_mappings.items() if new ==
                     shortest_stack_name][0]
         return basename
 
