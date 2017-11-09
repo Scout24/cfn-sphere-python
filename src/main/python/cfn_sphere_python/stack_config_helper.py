@@ -7,35 +7,6 @@ import cfn_sphere
 
 
 class StackConfigHelper(object):
-    '''
-    The StackConfigHelper is a python wrapper for syncing cfn-sphere
-    style stacks config to AWS.
-    It is like doing: ```cf sync -y cfn/dms.stacks.yaml``` in python.
-    Additionally you can change the stacks config programatically w/o changing
-    your config file.
-
-    # Features
-
-    - renaming all stacks with a suffix
-      cross referencing parameters between stacks will be renamed too
-    - adding or changing parameters of a stack
-    - getting outputs of a stack
-    - changing the region to deploy
-    - replacing tags
-
-    # example usage
-
-    configs = StackConfigHelper(config_file='cfn/stacks.yaml', suffix='test')
-    # to update some parameters call this
-    config.update_parameters('stack_basename', parameter_dict)
-    config.create_or_update_stacks()
-    #
-    config.get_stack_output('stack_basename','host')
-    # update stack cross references
-    config.update_references({'old_stackname': 'new_stackname'})
-    # delete afterwards
-    config.delete_stacks()
-    '''
 
     def __init__(self, config_file, suffix='it', region=None, tags=None):
         self.logger = cfn_sphere.util.get_logger()
