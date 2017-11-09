@@ -5,9 +5,9 @@
 [![Code Health](https://landscape.io/github//ImmobilienScout24/cfn-sphere-python/master/landscape.svg?style=flat)](https://landscape.io/github/ImmobilienScout24/cfn-sphere-python/master)
 
 Wrapper for using cfn-sphere stacks configuration with python.
-I developed this to (integration)test cfn-sphere stacks configs within python scripts, instead of using bash.
+I developed this to (integration)test [https://github.com/cfn-sphere/cfn-sphere](cfn-sphere) stacks configs within python scripts, instead of using bash.
 
-The contained StackConfigHelper class is a python wrapper for syncing cfn-sphere
+The contained StackConfigHelper class is a python wrapper for syncing [https://github.com/cfn-sphere/cfn-sphere](cfn-sphere)
 style stacks config to AWS.
 It is like doing: ```cf sync -y cfn/dms.stacks.yaml``` in python.
 Additionally you can change the stacks config programatically w/o changing
@@ -49,3 +49,7 @@ To delete all stacks:
 ```
 config.delete_stacks()
 ```
+
+# related projects
+
+* [https://github.com/cfn-sphere/cfn-sphere](cfn-sphere)
