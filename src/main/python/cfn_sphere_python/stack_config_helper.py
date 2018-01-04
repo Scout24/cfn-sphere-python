@@ -2,9 +2,8 @@ import json
 import logging
 import os
 import boto3
-
 import cfn_sphere
-
+from six import string_types
 
 class StackConfigHelper(object):
 
@@ -99,7 +98,7 @@ class StackConfigHelper(object):
 
         new_stack_config = stack_config
         for key, value in stack_config['parameters'].items():
-            if isinstance(value, (str, unicode)) and value.lower().startswith('|ref|'):
+            if isinstance(value, string_types) and value.lower().startswith('|ref|'):
                 ref = value.split('|', 2)[2]
                 for old, new in mapping.items():
                     if ref.startswith('{}.'.format(old)):
