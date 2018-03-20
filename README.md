@@ -26,7 +26,9 @@ your config file.
 
 Create a config from a cfn-sphere yaml file with suffix the stacksnames with 'test':
 ```
-configs = StackConfigHelper(config_file='cfn/stacks.yaml', suffix='test')
+from cfn_sphere_python.stack_config_helper import StackConfigHelper
+
+config = StackConfigHelper(config_file='cfn/stacks.yaml', suffix='test')
 ```
 to update some parameters call this
 ```
