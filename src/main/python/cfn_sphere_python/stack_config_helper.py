@@ -8,7 +8,7 @@ import cfn_sphere
 
 class StackConfigHelper(object):
 
-    def __init__(self, config_file, suffix='it', region=None, tags=None):
+    def __init__(self, config_file, suffix='', region=None, tags=None):
         self.logger = cfn_sphere.util.get_logger()
         self.logger.setLevel(logging.INFO)
 
