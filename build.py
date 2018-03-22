@@ -14,7 +14,7 @@ description = "cfn-sphere-python - A python wrapper for cfn-sphere to simplify t
 license = 'APACHE LICENCE, VERSION 2.0'
 summary = 'cfn-sphere-python Python Wrapper for AWS CloudFormation management tool cfn-sphere'
 url = 'https://github.com/ImmobilienScout24/cfn-sphere-python'
-version = '0.1'
+version = '0.2'
 
 default_task = ['clean', 'analyze', 'package']
 
@@ -23,6 +23,8 @@ default_task = ['clean', 'analyze', 'package']
 def set_properties(project):
     project.build_depends_on("unittest2")
     project.build_depends_on("mock")
+    project.build_depends_on("moto")
+    project.depends_on("boto3")
     project.depends_on("cfn-sphere")
 
     project.set_property('distutils_classifiers', [
@@ -34,3 +36,4 @@ def set_properties(project):
         'Programming Language :: Python',
         'Topic :: System :: Systems Administration'
     ])
+    project.set_property('coverage_threshold_warn', 60)
