@@ -4,6 +4,8 @@
 
 [![Code Health](https://landscape.io/github//ImmobilienScout24/cfn-sphere-python/master/landscape.svg?style=flat)](https://landscape.io/github/ImmobilienScout24/cfn-sphere-python/master)
 
+# This project is DEPRECATED and not any longer supported
+
 Wrapper for using cfn-sphere stacks configuration with python.
 I developed this to (integration)test [https://github.com/cfn-sphere/cfn-sphere](cfn-sphere) stacks configs within python scripts, instead of using bash.
 
